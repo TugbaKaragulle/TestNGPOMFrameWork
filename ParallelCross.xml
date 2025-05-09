@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Testler Suite" thread-count="3" parallel="tests">
+    <test verbose="3" preserve-order="true"
+          name="Firefox ile calisacak test">
+        <parameter name="browser" value="firefox"> </parameter>
+        <classes>
+            <class name="tests.DummyTest"> </class>
+            <class name="tests.FacebookTest"> </class>
+            <class name="tests.SouceDemoLoginTest"> </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true"
+          name="Edge ile calisacak test">
+        <parameter name="browser" value="edge"> </parameter>
+        <classes>
+            <class name="tests.DummyTest"> </class>
+            <class name="tests.FacebookTest"> </class>
+            <class name="tests.SouceDemoLoginTest"> </class>
+        </classes>
+    </test>
+
+
+    <test verbose="2" preserve-order="true"
+          name="Chrome ile calisacak test">
+        <parameter name="browser" value="chrome"> </parameter>
+        <classes>
+            <class name="tests.DummyTest"> </class>
+            <class name="tests.FacebookTest"> </class>
+            <class name="tests.SouceDemoLoginTest"> </class>
+        </classes>
+    </test>
+</suite>

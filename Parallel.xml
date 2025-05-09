@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="2" parallel="classes"> <!--    thread-count ve parallel tagini ekledik-->
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/tugba/IdeaProjects/TestNGProjectTeamFramework/src/test/java/tests/DummyTest.java">
+        <parameter name="browser" value="edge"> </parameter>  <!--        bu kismi configuration.properties'ten aliyor-->
+        <classes>
+            <class name="tests.DummyTest"> </class>
+            <class name="tests.FacebookTest"> </class>
+            <class name="tests.SouceDemoLoginTest"> </class>
+        </classes>
+    </test>
+</suite>

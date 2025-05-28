@@ -12,7 +12,7 @@ public class DummyTest extends BaseTest {
     @Test (groups = {"E2E", "regression"})
     public void testDummy(){
 
-        //Amazon.com'a git
+        //Amazon.com'a git ...
 
         getDriver().get(ConfigReader.getProperty("toUrl"));
 

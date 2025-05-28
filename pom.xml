@@ -52,6 +52,12 @@
             <version>1.0.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.25.0</version>
+        </dependency>
+
 
 
     </dependencies>
@@ -70,19 +76,24 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version> <!-- Güncel sürüm -->
                 <configuration>
-                    <!--                    suite xml files istedigimiz xml Files'i calistirmamizi saglar. -->
+                    <!--                                        suite xml files istedigimiz xml Files'i calistirmamizi saglar. -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>amazonHomePage.xml</suiteXmlFile> <!-- Regression.xml'in yolunu ver -->
+                        <suiteXmlFile>Parallel.xml</suiteXmlFile> <!-- Regression.xml'in yolunu ver -->
                     </suiteXmlFiles>
-                    <!--                    include kismi ise istedigimiz methodu calistirmamizi saglar.-->
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
+                    <!--                                        include kismi ise istedigimiz methodu calistirmamizi saglar.-->
+                    <!--                    <includes>-->
+                    <!--                        <include>**/*US01_LoginTest.java</include>-->
+                    <!--                    </includes>-->
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.11.2</version>
             </plugin>
 
         </plugins>
 
     </build>
-
 </project>

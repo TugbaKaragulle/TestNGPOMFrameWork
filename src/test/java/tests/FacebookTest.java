@@ -1,23 +1,32 @@
 package tests;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.FacebookPage;
 import utilities.BaseTest;
 import utilities.Driver;
 
+import java.time.Duration;
+
 public class FacebookTest extends BaseTest {
+
+    WebDriverWait wait;
 
 
     @Test (groups = {"smoke", "E2E"})
     public void facebookNegatifLogintesti() throws InterruptedException {
         //1 - https://www.facebook.com/ adresine gidin
+        wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         Driver.getDriver().get("https://www.facebook.com/");
 
         //2- Cookies cikiyorsa kabul edin
         FacebookPage facebookPage = new FacebookPage();
-        Thread.sleep(3000);
+        wait.until(ExpectedConditions.elementToBeClickable(facebookPage.cookiesKabulButonu));
+
         facebookPage.cookiesKabulButonu
                 .click();
 

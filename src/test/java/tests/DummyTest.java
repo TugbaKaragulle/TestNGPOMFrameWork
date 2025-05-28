@@ -5,9 +5,6 @@ import org.testng.annotations.Test;
 import pages.dummyPage;
 import utilities.BaseTest;
 import utilities.ConfigReader;
-import utilities.Driver;
-
-import static utilities.Driver.getDriver;
 
 public class DummyTest extends BaseTest {
 
